@@ -9,9 +9,9 @@
 \usepackage[T1]{fontenc}
 \usepackage[latin1]{inputenc}
 \usepackage[brazil]{babel}
-\usepackage[alf,abnt-repeated-author-omit=yes]{abntcite}
+\usepackage[alf,abnt-repeated-author-omit=yes]{abntex2cite}
 \usepackage{url}
-\usepackage{winfonts}
+%\usepackage{winfonts}
 \usepackage{txfonts}
 
 \fontfamily{arial}\selectfont
@@ -112,35 +112,37 @@
 \item [$\Delta(h)$] Assinatura diádica
 \end{listofsymbols}
 
-\chapter{Introdução}\label{chp:intro}
 
-\section{Apresentação}\label{sec:presentation}
-
-\section{Objetivos}\label{sec:goals}
-
-\section{Contribuições originais}\label{sec:contrib}
-
-\begin{example}
-Isto é um exemplo.
-\qed
-\end{example}
-
-\section{Organização}
-
-\chapter{Outro capítulo}\label{chp:outrocap}
-
-Este capítulo desenvolve a teoria de~\cite{agashe-lauter-venkatesan,al-riyami-paterson,ansi-x9.62,balasubramanian-koblitz,blake-seroussi-smart,bleichenbacher,weimerskirch}.
-
-\[
-E = mc^2.
-\]
-
-\chapter{Conclusões}\label{chp:conclusion}
-
-\bibliography{Tese-Modelo}
-
-\appendix
-
-\chapter{Demonstração do Lema da Bifurcação}\label{app:apendiceA}
+\include{capitulos/intro}
+%\chapter{Introdução}\label{chp:intro}
+%
+%\section{Apresentação}\label{sec:presentation}
+%
+%\section{Objetivos}\label{sec:goals}
+%
+%\section{Contribuições originais}\label{sec:contrib}
+%
+%\begin{example}
+%Isto é um exemplo.
+%\qed
+%\end{example}
+%
+%\section{Organização}
+%
+%\chapter{Outro capítulo}\label{chp:outrocap}
+%
+%Este capítulo desenvolve a teoria de~\cite{agashe-lauter-venkatesan,al-riyami-paterson,ansi-x9.62,balasubramanian-koblitz,blake-seroussi-smart,bleichenbacher,weimerskirch}.
+%
+%\[
+%E = mc^2.
+%\]
+%
+%\chapter{Conclusões}\label{chp:conclusion}
+%
+\bibliography{prat}
+%
+%\appendix
+%
+%\chapter{Demonstração do Lema da Bifurcação}\label{app:apendiceA}
 
 \end{document}
