@@ -1865,22 +1865,18 @@ Para mais informacoes, leia o manual da classe.\MessageBreak%
 \newcommand{\PoliTipoDocData}{}
 
 \newcommand{\monografiaFormatura}{%
-  \renewcommand{\PoliTipoDocData}{Monografia (Graduação em Engenharia de Computação)}
+  \renewcommand{\PoliTipoDocData}{Monografia (Graduação em Ciências da Computação)}
   \comentario{\vspace{1.0cm}
-    Texto apresentado à Escola
-    Politécnica da Universidade
-    de São Paulo como requisito
+    Texto apresentado à Universidade Paulista como requisito
     para a conclusão do curso de
-    graduação em Engenharia de Computação,
+    graduação em Ciência da Computação,
     junto ao \PoliDepartamentoData.}%
 }
 
 \newcommand{\monografiaMBA}{%
   \renewcommand{\PoliTipoDocData}{Monografia (MBA em Redes de Computadores)}
   \comentario{\vspace{1.0cm}
-    Texto apresentado à Escola
-    Politécnica da Universidade
-    de São Paulo como requisito
+    Texto apresentado à Universidade Paulista como requisito
     para obtenção do Título de
     Especialista (MBA) em Redes de
     Computadores, junto ao 
@@ -1890,9 +1886,7 @@ Para mais informacoes, leia o manual da classe.\MessageBreak%
 \newcommand{\qualificacaoMSc}[1]{%
   \renewcommand{\PoliTipoDocData}{Exame de Qualificação (Mestrado)}
   \comentario{\vspace{1.0cm}
-    Documento apresentado à Escola
-    Politécnica da Universidade
-    de São Paulo para a realização
+    Documento apresentado à Universidade Paulista para a realização
     do Exame de Qualificação
     de Mestrado em #1.}%
 }
@@ -1900,18 +1894,14 @@ Para mais informacoes, leia o manual da classe.\MessageBreak%
 \newcommand{\dissertacao}[1]{%
   \renewcommand{\PoliTipoDocData}{Dissertação (Mestrado)}
   \comentario{\vspace{1.0cm}
-    Dissertação apresentada à Escola
-    Politécnica da Universidade de
-    São Paulo para obtenção do
+    Dissertação apresentada à Universidade Paulista para obtenção do
     Título de Mestre em #1.}%
 }
 
 \newcommand{\qualificacaoDr}[1]{%
   \renewcommand{\PoliTipoDocData}{Exame de Qualificação (Doutorado)}
   \comentario{\vspace{1.0cm}
-    Documento apresentado à Escola
-    Politécnica da Universidade
-    de São Paulo para a realização
+    Documento apresentado à Universidade Paulista para a realização
     do Exame de Qualificação
     de Doutorado em #1.}%
 }
@@ -1919,9 +1909,7 @@ Para mais informacoes, leia o manual da classe.\MessageBreak%
 \newcommand{\teseDr}[1]{%
   \renewcommand{\PoliTipoDocData}{Tese (Doutorado)}
   \comentario{\vspace{1.0cm}
-    Tese apresentada à Escola
-    Politécnica da Universidade de
-    São Paulo para obtenção do
+    Tese apresentada à Universidade Paulista para obtenção do
     Título de Doutor em #1.}%
 }
 
@@ -1929,8 +1917,7 @@ Para mais informacoes, leia o manual da classe.\MessageBreak%
   \renewcommand{\PoliTipoDocData}{Tese (Livre Docência)}
   \comentario{\vspace{1.0cm}
     Tese apresentada à Escola
-    Politécnica da Universidade
-    de São Paulo como requisito
+Universidade Paulista como requisito
     para obtenção do Título de
     \mbox{Livre}-Docente junto ao
     \PoliDepartamentoData.}%
@@ -1941,8 +1928,7 @@ Para mais informacoes, leia o manual da classe.\MessageBreak%
   \renewcommand{\PoliTipoDocData}{Memorial (Livre Docência)}
   \comentario{\vspace{1.0cm}
     Texto apresentado à Escola
-    Politécnica da Universidade
-    de São Paulo como requisito
+Universidade Paulista como requisito
     para obtenção do Título de
     \mbox{Livre}-Docente junto ao
     \PoliDepartamentoData.}%
@@ -1958,7 +1944,7 @@ Para mais informacoes, leia o manual da classe.\MessageBreak%
 \newcommand{\PoliAutorIniciaisMaisSobrenome}{}
 
 \newcommand{\PoliRefFichaCatalografica}{%
-  \PoliTipoDocData~ --- Escola Politécnica da Universidade de São Paulo.
+  \PoliTipoDocData~ --- Universidade Paulista.
   \PoliDepartamentoData.}
 
 \newcommand{\PoliFichaCatalograficaData}{}
