@@ -14,5 +14,7 @@ Dentro deste repositório temos a seguinte estrutura de diretórios.
 +-- _src
 |   +-- temp.txt
 +-- _reference
-    +-- resume.txt
+|   +-- resume.txt
++-- _sandbox
+.
 ```
