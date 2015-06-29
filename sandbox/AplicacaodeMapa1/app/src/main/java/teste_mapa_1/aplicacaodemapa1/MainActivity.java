@@ -33,6 +33,7 @@ public class MainActivity extends ActionBarActivity
 {
 
     //Definindo variaveis
+    //teste teste teste
 
     private LatLng unip = new LatLng(-23.94356677, -46.33214807);
     private LatLng shop = new LatLng(-46.33236264,-46.33236264);
@@ -52,6 +53,7 @@ public class MainActivity extends ActionBarActivity
         //Defini��o de linhas de codigo para gerar o mapa
         //O R id a principio vai dar erro pois ainda nao foi definido. Voce pode defini-lo no activity_main
         //Pode ser definido como fragment android:id="@+id/mapa"
+
         mapa = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.mapa)).getMap();
 
          /*
@@ -171,7 +173,6 @@ public class MainActivity extends ActionBarActivity
         Marker ponto34 = mapa.addMarker(
                 new MarkerOptions()
                         .position(new LatLng(-23.9772266, -46.2998817)));
-
         Marker ponto35 = mapa.addMarker(
                 new MarkerOptions()
                         .position(new LatLng(-23.9764149, -46.2991355)));
