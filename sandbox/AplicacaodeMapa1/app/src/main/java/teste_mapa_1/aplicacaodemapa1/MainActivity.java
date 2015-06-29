@@ -33,7 +33,6 @@ public class MainActivity extends ActionBarActivity
 {
 
     //Definindo variaveis
-    //teste teste teste
 
     private LatLng unip = new LatLng(-23.94356677, -46.33214807);
     private LatLng shop = new LatLng(-46.33236264,-46.33236264);
