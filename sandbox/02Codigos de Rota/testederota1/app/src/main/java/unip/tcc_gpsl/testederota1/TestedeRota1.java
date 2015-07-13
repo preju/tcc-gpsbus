@@ -47,6 +47,9 @@ public class TestedeRota1 extends ActionBarActivity {
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(centralizarSantos, 12));
         googleMap.animateCamera(CameraUpdateFactory.zoomTo(12),2000,null);
 
+        pontosIda();
+        pontosVolta();
+
     }
 
     @Override
