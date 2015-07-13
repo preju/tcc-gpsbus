@@ -23,26 +23,59 @@ import java.util.List;
 
 public class TestedeRota1 extends ActionBarActivity {
 
+    //Variaveis Globais
+    //Lista de Pontos
+    public ArrayList<LatLng> listadePontos = new ArrayList<LatLng>();
+    public ArrayList<LatLng> listadePontosVolta = new ArrayList<LatLng>();
 
+    //Variaveis privadas
     //Exemplo de variavel de mapa
     private GoogleMap googleMap;
 
     //Exemplo de variavel de Marcador
     private LatLng centralizarSantos = new LatLng(-23.9678823,-46.3288865);
 
-
-
-
-    ;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_testede_rota1);
-        //Iniciando uma lista
-        ArrayList<LatLng> listadePontos = new ArrayList<LatLng>();
-        ArrayList<LatLng> listadePontosVolta = new ArrayList<LatLng>();
+
+        //Exemplo de iniciacao de mapa, necessario realizar alteracoes nos arquivos XML
+        googleMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.mapaFragment)).getMap();
+
+        //Centralizar em SANTOS
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(centralizarSantos, 12));
+        googleMap.animateCamera(CameraUpdateFactory.zoomTo(12),2000,null);
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_testede_rota1, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+
+
+        return super.onOptionsItemSelected(item);
+    }
+
+
+    private void pontosIda()
+    {
         //ida
         listadePontos.add(new LatLng(-23.935769, -46.333491));
         listadePontos.add(new LatLng(-23.93658339, -46.33024573));
@@ -78,7 +111,16 @@ public class TestedeRota1 extends ActionBarActivity {
         listadePontos.add(new LatLng(-23.98723144, -46.29497866));
         listadePontos.add(new LatLng(-23.98651587, -46.2952147));
         listadePontos.add(new LatLng(-23.9861924, -46.294807));
+        Polyline linhadeTesteIda = googleMap.addPolyline(new PolylineOptions()
+                .addAll(listadePontos)
+                .width(4)
+                .color(Color.BLUE));
 
+    }
+
+
+    private void pontosVolta()
+    {
         //volta
         listadePontosVolta.add(new LatLng(-23.9861924, -46.294807));
         listadePontosVolta.add(new LatLng(-23.98579324, -46.29464883));
@@ -101,7 +143,6 @@ public class TestedeRota1 extends ActionBarActivity {
         listadePontosVolta.add(new LatLng(-23.96456803, -46.3109833));
         listadePontosVolta.add(new LatLng(-23.96431313, -46.31175578));
         listadePontosVolta.add(new LatLng(-23.96293075, -46.31396592));
-
         listadePontosVolta.add(new LatLng(-23.96215623, -46.31386936));
         listadePontosVolta.add(new LatLng(-23.95546962, -46.31324708));
         listadePontosVolta.add(new LatLng(-23.95067505, -46.31300032));
@@ -120,51 +161,13 @@ public class TestedeRota1 extends ActionBarActivity {
         listadePontosVolta.add(new LatLng(-23.93381909, -46.33228004));
         listadePontosVolta.add(new LatLng(-23.9349272, -46.33264482));
         listadePontosVolta.add(new LatLng(-23.935769, -46.333491));
-
-
-        //Exemplo de iniciacao de mapa, necessario realizar alteracoes nos arquivos XML
-        googleMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.mapaFragment)).getMap();
-
-
-        //Centralizar em SANTOS
-        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(centralizarSantos, 12));
-        googleMap.animateCamera(CameraUpdateFactory.zoomTo(12),2000,null);
-
-
-        //Exemplo de marcacao de liinha no mapa
-        Polyline linhadeTesteIda = googleMap.addPolyline(new PolylineOptions()
-                .addAll(listadePontos)
-                .width(4)
-                .color(Color.BLUE));
         Polyline linhadeTesteVolta = googleMap.addPolyline(new PolylineOptions()
                 .addAll(listadePontosVolta)
                 .width(4)
                 .color(Color.RED));
 
-    
-
-
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_testede_rota1, menu);
-        return true;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }
