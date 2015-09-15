@@ -29,8 +29,7 @@
         </activity>
 
         <!--NAO ESQUECA DE ALTERAR - meta-data para inserir o codigo criado pelo site de api key do google e iserido no android:value="codigo gerado" -->
-        <meta-data android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyA9r63CCeXGkGaLu3iffDE5iJfu-vb3cfY"/>
+
     </application>
 
 </manifest>

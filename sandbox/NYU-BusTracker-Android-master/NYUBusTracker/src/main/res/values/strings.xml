@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">NYU Bus Tracker</string>
+    <string name="call_safe_ride">Tap to call Safe Ride</string>
+    <string name="start">Start:</string>
+    <string name="default_start">Click to set start stop</string>
+    <string name="end">End:</string>
+    <string name="default_end">Click to set end stop</string>
+    <string name="unable_to_connect">Unable to connect to the network.</string>
+    <string name="downloading">Downloading Data</string>
+    <string name="wait">Please Wait&#8230;</string>
+    <string name="offline">Bus currently offline.</string>
+    <string name="less_one_minute">Less than 1 minute</string>
+    <string name="one_minute">1 minute</string>
+    <string name="minutes">" minutes"</string>
+    <string name="hour">1 hour</string>
+    <string name="hours">" hours"</string>
+    <string name="hours_and">" hours and "</string>
+    <string name="hour_and_one_min">1 hour and 1 minute</string>
+    <string name="hour_and">"1 hour and "</string>
+    <string name="via">"via "</string>
+    <string name="next_bus_in">Next Bus In:</string>
+    <string name="information">NYU Bus Tracker\nInformation</string>
+    <string name="programmed_by">Programmed by:</string>
+    <string name="name">Tyler Palsulich</string>
+    <string name="open_source">This app is open source!</string>
+    <string name="github_link">Tap to view on GitHub</string>
+    <string name="thanks">Special thanks to Mike Jaoudi</string>
+    <string name="website">www.nyubustracker.com</string>
+    <string name="random_text">Random Text</string>
+    <string name="route">"Route "</string>
+    <string name="no_stops_available">We\'re sorry. No stops currently available.</string>
+    <string name="not_connected">We\'re sorry. Those stops aren\'t connected.</string>
+
+</resources>
