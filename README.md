@@ -18,3 +18,5 @@ Dentro deste repositório temos a seguinte estrutura de diretórios.
 +-- _sandbox
 .
 ```
+Como funciona o GIT
+http://rogerdudler.github.io/git-guide/index.pt_BR.html
