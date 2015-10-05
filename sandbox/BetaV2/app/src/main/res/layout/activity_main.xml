@@ -1,0 +1,91 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     tools:context=".MainActivity">
+
+    <!-- Tela Principal -->
+    <RelativeLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        ></RelativeLayout>
+
+    <!-- Menu android:layout_gravity="start" -->
+    <RelativeLayout
+        android:id="@+id/drawer_pane"
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+
+
+
+        >
+
+        <!-- Menu - Logo -->
+
+        <RelativeLayout
+            android:id="@+id/logo_box"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:background="@color/material_blue_grey_800">
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/logo1"
+                android:layout_marginLeft="8dp"
+                />
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/icon"
+                android:layout_marginTop="15dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#fff"
+                    android:text="SmartBus"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:textColor="#fff"
+                    android:text="Santos"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:textColor="#fff"
+                    android:text="Selecione a Linha:"
+                    android:layout_marginRight="20dp"/>
+
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <!-- Menu das listas das linhas -->
+        <ListView
+            android:id="@+id/nav_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/logo_box"
+            android:choiceMode="singleChoice"
+            android:background="#fffff"></ListView>
+    </RelativeLayout>
+
+
+
+
+
+
+</android.support.v4.widget.DrawerLayout>
