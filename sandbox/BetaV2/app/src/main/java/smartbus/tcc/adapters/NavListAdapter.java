@@ -18,6 +18,12 @@ import smartbus.tcc.smartbus.R;
 /**
  * Created by Rafael Magalhães on 05/10/2015 Outubro.
  */
+
+
+/**
+ * Classe NavListAdapter
+ * Essa classe serve para exibir itens do slide menu quando selecionados
+ */
 public class NavListAdapter extends ArrayAdapter<NavItem>
 {
     Context context;
@@ -44,7 +50,6 @@ public class NavListAdapter extends ArrayAdapter<NavItem>
         navIcon.setImageResource(navItem.getResIcone());
 
         /** PAREI AQUI ** FALTANDO TERMINAR O FRONT END DO APLICATIVO **/
-
         return v;
     }
 }
