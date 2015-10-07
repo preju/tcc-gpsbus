@@ -49,7 +49,7 @@ public class NavListAdapter extends ArrayAdapter<NavItem>
         tvSubTitulo.setText(navItem.getSubTitulo());
         navIcon.setImageResource(navItem.getResIcone());
 
-        /** PAREI AQUI ** FALTANDO TERMINAR O FRONT END DO APLICATIVO **/
+
         return v;
     }
 }
