@@ -19,6 +19,7 @@ import java.util.List;
 
 import smartbus.tcc.adapters.NavListAdapter;
 import smartbus.tcc.fragment.MapaFragment;
+import smartbus.tcc.fragment.SelecionarLinha;
 import smartbus.tcc.models.NavItem;
 
 public class MainActivity extends AppCompatActivity {
@@ -48,11 +49,11 @@ public class MainActivity extends AppCompatActivity {
         lvNav = (ListView) findViewById(R.id.nav_list);
 
 
-        //LOCAL ONDE IRA FICAR AS LINHAS NA LISTA
+        //Definindo o titulo e subtitulo das opçoes
         listNavItens = new ArrayList<NavItem>();
-        listNavItens.add(new NavItem("Linha 04", "Circular", R.drawable.bus));
-        listNavItens.add(new NavItem("Linha 05", "Circular", R.drawable.bus));
-        listNavItens.add(new NavItem("Linha 06", "Circular", R.drawable.bus));
+        listNavItens.add(new NavItem("Home", "Tela Inicial", R.drawable.bus));
+        listNavItens.add(new NavItem("Selecionar linhas", "", R.drawable.bus));
+        listNavItens.add(new NavItem("Ajuda", "Como usar o app", R.drawable.bus));
 
 
         NavListAdapter navListAdapter = new NavListAdapter(getApplicationContext(), R.layout.itens_nav_list, listNavItens);
@@ -63,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
         //selecionar qual tela ira aparecer
         listFragments = new ArrayList<Fragment>();
         listFragments.add(new MapaFragment());
+        listFragments.add(new SelecionarLinha());
 
         //primeiro fragment a carregar é o default
         android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
@@ -79,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
             {
                 //alterar o fragment inicial com a escolha que da nav list
                 android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
-                fragmentManager.beginTransaction().replace(R.id.main_content, listFragments.get(0)).commit();
+                fragmentManager.beginTransaction().replace(R.id.main_content, listFragments.get(position)).commit();
                 setTitle(listNavItens.get(position).getTitulo());
                 lvNav.setItemChecked(position, true);
                 drawerLayout.closeDrawer(drawerPane);
