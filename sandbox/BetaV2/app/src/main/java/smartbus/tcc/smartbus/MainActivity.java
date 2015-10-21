@@ -14,10 +14,14 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.SupportMapFragment;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import smartbus.tcc.adapters.NavListAdapter;
+import smartbus.tcc.fragment.AjudaFragment;
 import smartbus.tcc.fragment.MapaFragment;
 import smartbus.tcc.fragment.SelecionarLinha;
 import smartbus.tcc.models.NavItem;
@@ -33,13 +37,15 @@ public class MainActivity extends AppCompatActivity {
 
     ActionBarDrawerToggle actionBarDrawerToggle;
 
-
+    public GoogleMap googleMap;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        googleMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.mapFragment)).getMap();
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -65,6 +71,8 @@ public class MainActivity extends AppCompatActivity {
         listFragments = new ArrayList<Fragment>();
         listFragments.add(new MapaFragment());
         listFragments.add(new SelecionarLinha());
+        listFragments.add(new AjudaFragment());
+
 
         //primeiro fragment a carregar é o default
         android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
@@ -86,8 +94,11 @@ public class MainActivity extends AppCompatActivity {
                 lvNav.setItemChecked(position, true);
                 drawerLayout.closeDrawer(drawerPane);
 
+
             }
         });
+
+
 
 
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.drawer_opened, R.string.drawer_closed)

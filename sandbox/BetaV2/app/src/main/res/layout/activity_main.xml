@@ -12,11 +12,12 @@
 
         ></RelativeLayout>
 
-    <!-- Menu android:layout_gravity="start" -->
+    <!-- Menu  -->
     <RelativeLayout
         android:id="@+id/drawer_pane"
         android:layout_width="280dp"
         android:layout_height="match_parent"
+        android:layout_gravity="start"
 
         >
 
