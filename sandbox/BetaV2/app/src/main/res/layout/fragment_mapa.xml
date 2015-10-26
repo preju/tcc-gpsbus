@@ -3,7 +3,52 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <fragment android:id="@+id/mapFragment"
+
+
+    <!-- Menu - Logo -->
+
+    <RelativeLayout
+        android:id="@+id/logo_box"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:background="#228B22">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/logo1"
+            android:layout_marginLeft="8dp"
+            />
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/icon"
+            android:layout_marginTop="15dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:text="SmartBus"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:textColor="#FFFFFF"
+                android:text="Santos"/>
+
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
+    <fragment android:id="@+id/mapfragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         class="com.google.android.gms.maps.SupportMapFragment"/>

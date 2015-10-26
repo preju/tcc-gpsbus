@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
     ActionBarDrawerToggle actionBarDrawerToggle;
 
-    public GoogleMap googleMap;
+
 
 
     @Override
@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        googleMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.mapFragment)).getMap();
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -69,8 +68,8 @@ public class MainActivity extends AppCompatActivity {
 
         //selecionar qual tela ira aparecer
         listFragments = new ArrayList<Fragment>();
-        listFragments.add(new MapaFragment());
         listFragments.add(new SelecionarLinha());
+        listFragments.add(new MapaFragment());
         listFragments.add(new AjudaFragment());
 
 
